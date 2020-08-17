@@ -361,11 +361,11 @@
               <div class="timeline-content">
                 <!-- <h4>University of Life</h4> -->
                 <p>
-                  Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in
-                  magna consectetur nisi cupidatat laboris esse eiusmod deserunt
-                  aute do quis velit esse sed Ut proident cupidatat nulla esse
-                  cillum laborum occaecat nostrud sit dolor incididunt amet est
-                  occaecat nisi.
+                  Initially we have start learning hardware programmable
+                  language such as verilog , and keep learning basic electronic
+                  module, then we moved on to LDPC code and Shannon theory,
+                  aftermath followed brief analysis of information technology
+                  and belief propagation algorithms and density evolution.
                 </p>
               </div>
             </div>
@@ -406,11 +406,8 @@
               <div class="timeline-content">
                 <!-- <h4>Design College</h4> -->
                 <p>
-                  Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in
-                  magna consectetur nisi cupidatat laboris esse eiusmod deserunt
-                  aute do quis velit esse sed Ut proident cupidatat nulla esse
-                  cillum laborum occaecat nostrud sit dolor incididunt amet est
-                  occaecat nisi incididunt.
+                  The Experimentation Phase will be carried out when we return
+                  to the campus.
                 </p>
               </div>
             </div>
@@ -557,7 +554,7 @@
                 <a href="#modal-01" class="overlay">
                   <div class="folio-item-table">
                     <div class="folio-item-cell">
-                      <h3 class="folio-title">Decoder</h3>
+                      <h3 class="folio-title">Block Diagram</h3>
                     </div>
                   </div>
                 </a>
@@ -599,7 +596,7 @@
                 <a href="#modal-05" class="overlay">
                   <div class="folio-item-table">
                     <div class="folio-item-cell">
-                      <h3 class="folio-title">BP Algorithm</h3>
+                      <h3 class="folio-title">Tanner Graph</h3>
                     </div>
                   </div>
                 </a>
@@ -629,14 +626,19 @@
               </div>
 
               <div class="description-box">
-                <h4>Liberty</h4>
+                <h4>Decoder Implementation</h4>
                 <p>
-                  Proin gravida nibh vel velit auctor aliquet. Aenean
-                  sollicitudin, lorem quis bibendum auctor, nisi elit consequat
-                  ipsum, nec sagittis sem nibh id elit.
+                  We implemented a (3, 6)-regular LDPC code partly parallel
+                  decoder for L = 256 usingXilinx Virtex-E XCV2600E device with
+                  the package FG1156. The corresponding LDPCcode length is N =
+                  L·k2= 256·62 = 9216 and the corresponding code rate is 1/2.We
+                  obtain the constrained random parameter set for
+                  implementingπ3and each AG(3)x,yas follows: first generate a
+                  large number of parameter sets from which we find few
+                  setsleading to relatively high Tanner graph average cycle
+                  length, then we select one set leadingto the best performance
+                  based on computer simulations.
                 </p>
-
-                <div class="categories">Web Development</div>
               </div>
 
               <div class="link-box">
@@ -651,14 +653,23 @@
               </div>
 
               <div class="description-box">
-                <h4>Shutterbug</h4>
+                <h4>Architecture</h4>
                 <p>
-                  Proin gravida nibh vel velit auctor aliquet. Aenean
-                  sollicitudin, lorem quis bibendum auctor, nisi elit consequat
-                  ipsum, nec sagittis sem nibh id elit.
+                  1. Memory Banks: Each PE block PEx,ycontains five RAM blocks:
+                  EXT-RAM-ifori=1, 2, 3, INT-RAM, and DEC-RAM. Each EXT-RAM-ihas
+                  L memory locations and thelocation with the address d-1
+                  (1≥d≥L) contains the extrinsic messages exchangedbetween the
+                  variable node vx,ydin VGx,yand its neighboring check node in
+                  CGi. TheINT-RAM and DEC-RAM store the intrinsic message and
+                  hard decision associated withnode vx,ydat the memory location
+                  with the address d-1 (1≥d≥L). <br />
+                  2. Address Generator: One address generator AG(i)x,yassociates
+                  with one EXT-RAM-iineach PEx,y. In the check node processing,
+                  AG(i)x,ygenerates the address for readinghybrid data and, due
+                  to the five-stage pipelining of datapath loop, the address for
+                  writingback the check-to-variable message is obtained via
+                  delaying the read address by five clockcycles.
                 </p>
-
-                <div class="categories">Web Design</div>
               </div>
 
               <div class="link-box">
@@ -673,14 +684,18 @@
               </div>
 
               <div class="description-box">
-                <h4>Clouds</h4>
+                <h4>Architecture</h4>
                 <p>
-                  Proin gravida nibh vel velit auctor aliquet. Aenean
-                  sollicitudin, lorem quis bibendum auctor, nisi elit consequat
-                  ipsum, nec sagittis sem nibh id elit.
+                  3. Shuffle Network: A bi-directional shuffle networkπiis
+                  implemented to realize the parity-check matrix H with the
+                  address generators AG(i)x,y.11 <br />
+                  4. CNU: Each CNU carries out the operations of one check node,
+                  including the parity checkand computation of check-to-variable
+                  extrinsic messages.<br />
+                  5. VNU: Each VNU generates the hard decision and all the
+                  variable-to-check extrinsic mes-sages associated with one
+                  variable node.
                 </p>
-
-                <div class="categories">Web Design</div>
               </div>
 
               <div class="link-box">
@@ -695,14 +710,19 @@
               </div>
 
               <div class="description-box">
-                <h4>Lighthouse</h4>
+                <h4>Tanner Graph</h4>
                 <p>
-                  Proin gravida nibh vel velit auctor aliquet. Aenean
-                  sollicitudin, lorem quis bibendum auctor, nisi elit consequat
-                  ipsum, nec sagittis sem nibh id elit.
+                  Defined as the null space of a very sparse M×N parity-check
+                  matrix H, an LDPC code istypically represented by a bipartite
+                  graph, usually called Tanner graph, in which one set of
+                  Nvariable nodes corresponds to the set of codeword, another
+                  set of M check nodes corresponds tothe set of parity-check
+                  constraints and each edge corresponds to a nonzero entry in
+                  the parity-check matrix H. (A bipartite graph is one in which
+                  the nodes can be partitioned into two sets,X and Y, so that
+                  the only edges of the graph are between the nodes in X and the
+                  nodes in Y.)
                 </p>
-
-                <div class="categories">Web Development</div>
               </div>
 
               <div class="link-box">
